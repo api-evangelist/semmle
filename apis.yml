@@ -1,8 +1,27 @@
 aid: semmle
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/semmle.png
 name: Semmle
-description: 'Semmle is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Semmle was a semantic code-analysis company whose engine let developers write
+  queries (in its QL query language) to find security vulnerabilities and their
+  variants across large codebases, and which powered the free open-source code
+  review platform LGTM.com. Its technology was adopted by Uber, NASA, Microsoft,
+  and Google. GitHub acquired Semmle in September 2019 and folded the QL engine
+  into what is now CodeQL and GitHub code scanning; the standalone Semmle and
+  LGTM.com products were retired and www.semmle.com now redirects to the GitHub
+  acquisition announcement. This profile is retained as a historical (acquired)
+  company lead in the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/semmle/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +29,20 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: github
+x-acquired-date: '2019-09-18'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Enterprise
+- Code Analysis
+- Application Security
+- Static Analysis
+- Developer Tools
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +50,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/semmle-domain-security.yml
 - type: Website
   url: http://www.semmle.com
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
